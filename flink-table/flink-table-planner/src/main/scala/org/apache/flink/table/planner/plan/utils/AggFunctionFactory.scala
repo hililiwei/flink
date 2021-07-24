@@ -368,6 +368,8 @@ class AggFunctionFactory(
         new LeadLagAggFunction.BooleanLeadLagAggFunction(argTypes.length)
       case VARCHAR =>
         new LeadLagAggFunction.StringLeadLagAggFunction(argTypes.length)
+      case CHAR =>
+        new LeadLagAggFunction.StringLeadLagAggFunction(argTypes.length)
       case DATE =>
         new LeadLagAggFunction.DateLeadLagAggFunction(argTypes.length)
       case TIME_WITHOUT_TIME_ZONE =>
