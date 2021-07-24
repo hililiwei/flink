@@ -366,7 +366,7 @@ class AggFunctionFactory(
         new LeadLagAggFunction.DoubleLeadLagAggFunction(argTypes.length)
       case BOOLEAN =>
         new LeadLagAggFunction.BooleanLeadLagAggFunction(argTypes.length)
-      case VARCHAR =>
+      case VARCHAR | CHAR =>
         new LeadLagAggFunction.StringLeadLagAggFunction(argTypes.length)
       case DATE =>
         new LeadLagAggFunction.DateLeadLagAggFunction(argTypes.length)
