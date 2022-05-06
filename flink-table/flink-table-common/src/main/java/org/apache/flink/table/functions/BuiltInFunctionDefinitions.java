@@ -285,6 +285,14 @@ public final class BuiltInFunctionDefinitions {
                     .outputTypeStrategy(nullableIfArgs(explicit(DataTypes.BOOLEAN())))
                     .build();
 
+    public static final BuiltInFunctionDefinition BANG_EQUALS =
+            BuiltInFunctionDefinition.newBuilder()
+                    .name("notEquals")
+                    .kind(SCALAR)
+                    .inputTypeStrategy(TWO_EQUALS_COMPARABLE)
+                    .outputTypeStrategy(nullableIfArgs(explicit(DataTypes.BOOLEAN())))
+                    .build();
+
     public static final BuiltInFunctionDefinition IS_NULL =
             BuiltInFunctionDefinition.newBuilder()
                     .name("isNull")
